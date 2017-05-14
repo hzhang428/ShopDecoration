@@ -1,4 +1,4 @@
-var Product = require('../model/Product');
+var Product = require('../model/product');
 var mongoose = require('mongoose');
 mongoose.connect('localhost:27017/shopping');
 mongoose.Promise = global.Promise;

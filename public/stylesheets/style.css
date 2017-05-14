@@ -1,5 +1,9 @@
 .thumbnail .description {
-    color: #5a585a
+    color: #5a585a,
+}
+
+.thumbnail {
+    height: 600px
 }
 
 .class {
