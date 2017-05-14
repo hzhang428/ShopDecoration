@@ -1,5 +1,5 @@
 .thumbnail .description {
-    color: #5a585a,
+    color: #5a585a
 }
 
 .thumbnail {
@@ -8,4 +8,8 @@
 
 .class {
     font-weight: bold;
+}
+
+body {
+    padding-top: 70px;
 }
