@@ -2,6 +2,14 @@
     color: #5a585a
 }
 
+.thumbnail {
+    height: 600px
+}
+
 .class {
     font-weight: bold;
+}
+
+body {
+    padding-top: 70px;
 }

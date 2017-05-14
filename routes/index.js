@@ -1,9 +1,16 @@
 var express = require('express');
 var router = express.Router();
+var Product = require('../model/product');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('shop/index', { title: 'Express' });
+    Product.find(function(err, docs) {
+        if (err) {
+            console.log("Error while retrieving data");
+        }
+        res.render('shop/index', { title: 'Shopping Cart', products: docs });
+    });
+
 });
 
 module.exports = router;
