@@ -64,11 +64,15 @@ var products = [
 var saveData = new Promise((resolve, reject) => {
     try {
         for (let i = 0; i < products.length; i++) {
-            products[i].save();
+            products[i].save(function(err, result) {
+                if (err) {
+                    throw err;
+                }
+            });
         }
         resolve();
-    } catch (e) {
-        reject(e.message);
+    } catch (err) {
+        reject(err.message);
     }
 });
 
@@ -79,8 +83,8 @@ saveData.then(() => {
         console.log("Failed to close");
     });
 }).catch(
-    e => {
-        console.log(e);
+    err => {
+        console.log(err);
     }
 );
 
